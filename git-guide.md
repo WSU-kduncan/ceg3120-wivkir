@@ -1,45 +1,45 @@
 * status
- - Shows status of the local repository. This status includes:
-  - number of local commits that have not been synced with remote (GitHub)
-  - list of files in local folder than are NOT being tracked by git
-  - list of files in local folder that have changes that need to be committed
- - git status
+	- Shows status of the local repository. This status includes:
+		- number of local commits that have not been synced with remote (GitHub)
+		- list of files in local folder than are NOT being tracked by git
+		- list of files in local folder that have changes that need to be committed
+	- `git status`
 * clone
- - Clone a repository into a new directory
- - `git clone`
+	- Clone a repository into a new directory
+	- `git clone`
 * add
- - Add file contents to the index	
- - `git add`
+	- Add file contents to the index	
+	- `git add`
 * rm
- - Remove files from the working tree and from the index
- - `git rm`
+	- Remove files from the working tree and from the index
+	- `git rm`
 * commit
- - Record changes to the repository
- - `git commit`
+	- Record changes to the repository
+	- `git commit`
 * push
- - Update remote refs along with associated objects
- - `git push`
+	- Update remote refs along with associated objects
+	- `git push`
 * fetch
- - Download objects and refs from another repository
- - `git fetch`
+	- Download objects and refs from another repository
+	- `git fetch`
 * merge
- - Join two or more development histories together
- - `git merge`
+	- Join two or more development histories together
+	- `git merge`
 * pull
- - Fetch from and integrate with another repository or a local branch
- - `git pull`
+	- Fetch from and integrate with another repository or a local branch
+	- `git pull`
 * branch
- - List, create, or delete branches
- - `git branch`
+	- List, create, or delete branches
+	- `git branch`
 * checkout
- - Switch branches or restore working tree files
- - `git checkout`
+	- Switch branches or restore working tree files
+	- `git checkout`
 * init
- - Create an empty Git repository or reinitialize an existing one
- - `git init`
+	- Create an empty Git repository or reinitialize an existing one
+	- `git init`
 * remote
- - Manage set of tracked repositories
- - `git remote`
+	- Manage set of tracked repositories
+	- `git remote`
 
 git files & folders
 
