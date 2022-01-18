@@ -1,3 +1,4 @@
+git commands
 * status
 	- Shows status of the local repository. This status includes:
 		- number of local commits that have not been synced with remote (GitHub)
@@ -40,16 +41,23 @@
 * remote
 	- Manage set of tracked repositories
 	- `git remote`
+  
 
 git files & folders
 
-   * .git folder
-   * .gitignore file
-   * .git/hooks
+* .git folder
+	- Contains everything needed for version control in git 
+* .gitignore file
+	- A list of files and folders to block from being added to a remote repository
+* .git/hooks
+	- Holds custom scripts to activate when certain important actions occur
+  
 
 GitHub
 
-   * Pull requests
-   * SSH authentication to repositories
-   * Actions
-
+* Pull requests
+	- A request to GitHub to download all commits ahead of the local repository
+* SSH authentication to repositories
+	- A more secure way to authenticate to GitHub than HTTPS
+* Actions
+	- Used to automate portions of the GitHub workflow
