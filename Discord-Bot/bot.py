@@ -15,39 +15,46 @@ client = discord.Client()
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
-            for guild in client.guilds:
-                        if guild.name == GUILD:
-                                        break
+    for guild in client.guilds:
+        if guild.name == GUILD:
+            break
 
-                                        print(
-                                                        f'{client.user} is connected to the following guild:\n'
-                                                                f'{guild.name}(id: {guild.id})'
-                                                                    )
+    print(
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id: {guild.id})'
+    )
 
-                                        @client.event
-                                        async def on_message(message):
-                                                if message.author == client.user:
-                                                            return
+    members = '\n - '.join([member.name for member in guild.members])
+    print(f'Guild Members:\n - {members}')
 
-                                                            brooklyn_99_quotes = [
-                                                                            'I\'m the human form of the 💯 emoji.',
-                                                                                    'Bingpot!',
-                                                                                            (
-                                                                                                            'Cool. Cool cool cool cool cool cool cool, '
-                                                                                                                        'no doubt no doubt no doubt no doubt.'
-                                                                                                                                ),
-                                                                                                ]
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
 
-                                                                hitchhiker_quotes = [
-                                                                                'There is an art, it says, or rather, a knack to flying. The knack lies in learning how to throw yourself at the ground and miss.',
-                                                                                        'It is a mistake to think you can solve any major problems just with potatoes.',
-                                                                                                'In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.',
-                                                                                                        'A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.',
-                                                                                                            ]
+    DnD_quotes = [
+        'Barbosa: Im going to bed',
+        'Aloe: I cast magic missile',
+        'Blonic: Im gonna feed Robert a carrot',
+        'Calypso: This is my boat now, you can work for me',
+        'Zephyr: Right, this looks bad, but Ive got a great explanation',
+        'Grover: Ill use my hwip',
+        'Azariah: I think Ill cast Flame Blade',
+        'Fresh Prince: I know I was locked in a dungeon, but you guys can totally trust me',
+        'Fafnir: *explodes*',
+        'Eldan: Everyone listen up, Ive got a plan',
+    ]
 
-                                                                    if message.content == 'towel!':
-                                                                                #response = random.choice(brooklyn_99_quotes)
-                                                                                        response = random.choice(hitchhiker_quotes)
-                                                                                                await message.channel.send(response)
+    if "Jeremead" in message.content:
+        response = random.choice(DnD_quotes)
+        await message.channel.send(response)
 
-                                                                                                client.run(TOKEN)
+@client.event
+async def on_error(event, *args, **kwargs):
+    with open('err.log', 'a') as f:
+        if event == 'on_message':
+            f.write(f'Unhandled message: {args[0]}\n')
+        else:
+            raise
+
+client.run(TOKEN)
