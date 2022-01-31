@@ -52,7 +52,16 @@ async def on_message(message):
         #response = random.choice(brooklyn_99_quotes)
         response = random.choice(hitchhiker_quotes)
         await message.channel.send(response)
-    
+
+@bot.command(name='roll_dice', help='Simulates rolling dice.')
+async def roll(ctx, number_of_dice: int, number_of_sides: int):
+    dice = [
+        str(random.choice(range(1, number_of_sides + 1)))
+        for _ in range(number_of_dice)
+    ]
+    await ctx.send(', '.join(dice))
+            
+
 @client.event
 async def on_error(event, *args, **kwargs):
     with open('err.log', 'a') as f:
