@@ -4,7 +4,7 @@ Setup
 - Where to put it to work with the code
   - It is good practice to keep the API token within an .env variable file and never publish that file. You can still use the token by referencing the file with a variable in your code.
 - Dependencies
-  - In order to run this bot you will need: python 3, discord.py, and python-dotenv.
+  - In order to run this bot you will need: python 3, discord.py, python-dotenv, and an internet connection.
 
 
 Usage
@@ -13,6 +13,7 @@ Usage
 
 
 Research
-- You may have realized that it is lame that it only runs when you run the program.
-- In the real world, things are "always on", not waiting for Bob to turn his PC on and make sure the program is running.
 - Research some possible solutions that would solve this, and discuss why you think it would work.
+  - I have a second computer that I sometimes run a Minecraft server out of. I plan on cloning the bot onto it and running it from there. This way I have full control and it is cheap.
+  - I could also rent a remote all-purpose server from AWS and leave it running permanently. However, if AWS goes down, so does my bot, and I'll have to waith for them to fix it.
+  - There were a few free solutions online involving glitch.com, repl.it, uptimerobot.com, and a couple different bot websites. They seem more user friendly at the cost of having less control.
