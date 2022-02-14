@@ -1,27 +1,27 @@
 ## Part 1 - Build a VPC
 1. Create a VPC
    - A VPC is a virtual network on the cloud
-   - ![an image of a VPC](VPC.png) 
+   - ![an image of a VPC](VPC.PNG) 
 
 
 2. Create a subnet
    - A subnet is a range of IP's within the VPC
-   - ![an image of a subnet](subnet.png)
+   - ![an image of a subnet](subnet.PNG)
 
 
 3. Create an internet gateway
    - An intenet gateway enables the VPC to communicate with the internet
-   - ![an image of an internet gateway](gateway.png)
+   - ![an image of an internet gateway](gateway.PNG)
 
 
 4. Create a route table
    - A route table directs network traffic in the VPC
-   - ![an image of a route table](route.png)
+   - ![an image of a route table](route.PNG)
 
 
 5. Create a security group
    - A security group controls inbound and outbound traffic in the VPC
-   - ![an image of security group](security.png)
+   - ![an image of security group](security.PNG)
 
 
 ------------------------------------------------------------------
