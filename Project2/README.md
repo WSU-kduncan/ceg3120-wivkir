@@ -1,57 +1,33 @@
-##Part 1 - Build a VPC
+## Part 1 - Build a VPC
 1. Create a VPC
-  - Tag it with "YOURLASTNAME-VPC"
-  - Specify a /24 private IP address range
-  - Description
-  - Screenshot 
+   - A VPC is a virtual network on the cloud
+   - ![an image of a VPC](VPC.png) 
 
 
 2. Create a subnet
-
-  - Tag it with "YOURLASTNAME-Subnet"
-  - Specify a /28 private IP address range
-  - Attach it to your VPC
-  - Description
-  - Screenshot
+   - A subnet is a range of IP's within the VPC
+   - ![an image of a subnet](subnet.png)
 
 
 3. Create an internet gateway
-
-  - Tag it with "YOURLASTNAME-gw"
-  - Attach it to your VPC
-  - Description
-  - Screenshot
+   - An intenet gateway enables the VPC to communicate with the internet
+   - ![an image of an internet gateway](gateway.png)
 
 
 4. Create a route table
-
-  - Tag it with "YOURLASTNAME-routetable"
-  - Attach it to your VPC
-  - Associate it with your subnet
-  - Add a routing table rule that sends traffic to all destinations to your internet gateway
-  - Description
-  - Screenshot
+   - A route table directs network traffic in the VPC
+   - ![an image of a route table](route.png)
 
 
 5. Create a security group
-
-  - Tag it with "YOURLASTNAME-sg"
-  - Allow SSH for a set of trusted networks including:
-    - Your home / where you usually connect to your instances from
-    - Wright State (addresses starting with 130.108)
-    - Instances within the VPC
-  - Attach it to your VPC
-  - Image should include your Inbound rules
-  - Description
-  - Screenshot
-
-
-- (If necessary, else skip) Create a key pair
+   - A security group controls inbound and outbound traffic in the VPC
+   - ![an image of security group](security.png)
 
 
 ------------------------------------------------------------------
 
-##Part 2 - EC2 instances
+
+## Part 2 - EC2 instances
 1. Create a new instance. Give a write up of the following information:
   - AMI selected
     - default username of the instance type selected
