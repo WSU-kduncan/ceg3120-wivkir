@@ -29,38 +29,32 @@
 
 ## Part 2 - EC2 instances
 1. Create a new instance. Give a write up of the following information:
-  - AMI selected
-    - default username of the instance type selected
-  - Instance type selected
+  - AMI selected: Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type - ami-033b95fb8079dc481 (64-bit x86)
+  - default username: ec2-user
+  - Instance type: t2.micro
 
 
-2. Attach the instance to your VPC. As discussed there are different pathways to doing this. Say how you did it.
+2. In the "Configure Instance" tab I changed the network to APONE-VPC
 
 
-3. Determine whether a Public IPv4 address will be auto-assigned to the instance. Justify your choice to do so (or not do so)
-  - NOTE - in the next few steps, you will be required to request an Elastic IP address and associate it to the instance. Factor that in to your discussion here.
+3. In the "Configure Instance" tab, the "Auto-assign Public IP" setting is set to "Use subnet setting(Disable)", therefore an IPv4 address will not be automatically assigned.
 
 
-4. Attach a volume to your instance. As discussed there are different pathways to doing this. Say how you did it.
+4. In the "Add Storage" tab I clicked "Add New Volume", I also made sure to select delete on termination.
 
 
-5. Tag your instance with a "Name" of "YOURLASTNAME-instance". Say how you did it
+5. In the "Add Tags" tab, I clicked "Add Tag". Under "Key" I typed "Name", under "Value" I typed "APONE-instance".
 
 
-6. Associate your security group, "YOURLASTNAME-sg" to your instance. Say how you did it.
+6. In the "Configure Security Group" tab, I picked "Select an existing security group", then picked "APONE-sg".
 
 
-7. Reserve an Elastic IP address. Tag it with "YOURLASTNAME-EIP". Associate the Elastic IP with your instance. Say how you did it.
+7. I clicked on "Elastic IPs" in the left-hand EC2 toolbar, then "Allocate Elastic IP address". I left the default settings, but added the tag "APONE-eip". With the new IP address selected I clicked "Actions" then "Associate Elastic IP address". Under instance I selected "APONE-instance". Under private IP address I selected "10.0.0.10".
 
 
-8. Create a screenshot your instance details and add it to your project write up. Example below: sample instance details
-![an oddly nice looking long john silvers](ljs.jpg)
+8. ![an image of an EC2 instance](instance.PNG)
 
-9. ssh in to your instance. Change the hostname to "YOURLASTNAME-AMI" where AMI is some version of the AMI you chose. Say how you did it.
-  - It is wise to copy config files you are about to change to filename.old For /etc/hostname, for example, I would first copy the current hostname file to /etc/hostname.old
-  - You should not change permissions on any files you are modifying. They are system config files. You may need to access them with adminisrative privileges.
-  - Here is a helpful resource: https://www.tecmint.com/set-hostname-permanently-in-linux/ I did not modify /etc/hosts on mine - do so or not as you wish.
+9. First, 
 
-
-10. Create a screenshot your ssh connection to your instance and add it to your project write up - make sure it shows your new hostname.
+10. 
 
