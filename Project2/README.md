@@ -54,7 +54,7 @@
 
 8. ![an image of an EC2 instance](instance.PNG)
 
-9. First, 
+9. Once I connected to the system, I checked the hostname with "hostname". It was "ip-10-0-0-10.ec2.internal". Then, I navigated to where the hostnames are stored and made a copy of the hosts file called "hosts.old". After, I used the command "sudo hostnamectl set-hostname APONE-AmazonLinux2". I appended "127.0.0.1 APONE-AmazonLinux2" to the end of hosts.
 
-10. 
+10. ![an image of an ssh connection to the EC2 instance](hostname.PNG)
 
