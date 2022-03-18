@@ -15,7 +15,7 @@ Setup the following and add documentation or screenshots to your `README.md` fil
    - How to restart the service after a configuration change
      - a
    - Resources used (websites)
-     - a
+     - https://www.vultr.com/docs/how-to-install-haproxy-on-ubuntu-20-04/
 4. How set up a webserver
    - What file(s) were modified & their location
      - a
@@ -26,7 +26,7 @@ Setup the following and add documentation or screenshots to your `README.md` fil
    - How to restart the service after a configuration change
      - a
    - Resources used (websites)
-     - a
+     - https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04
 5. From the browser, when connecting to the proxy server, take two screenshots.
    - one screenshot that shows content from "server 1"
      - a

@@ -212,15 +212,16 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref PrivateSubnet
-          PrivateIpAddress: 10.0.1.10
+          PrivateIpAddress: 10.0.1.11
       UserData:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
-# TODO need to install apache or nginx
+            sudo apt install apache2 && \ 
+            sudo ufw allow 'Apache' && \
             apt-get install -y git && \
-            hostnamectl set-hostname webserv1 && \
+            hostnamectl set-hostname webserv2 && \
             reboot
   WebServ2Instance:
     Type: 'AWS::EC2::Instance'
@@ -247,13 +248,14 @@ Resources:
           DeviceIndex: '0'
           DeleteOnTermination: 'true'
           SubnetId: !Ref PrivateSubnet
-          PrivateIpAddress: 10.0.1.11
+          PrivateIpAddress: 10.0.1.12
       UserData:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
-# TODO need to install apache or nginx
+            sudo apt install apache2 && \ 
+            sudo ufw allow 'Apache' && \
             apt-get install -y git && \
             hostnamectl set-hostname webserv2 && \
             reboot
